@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -30,4 +32,182 @@ header {
 
 .header__ul {
     display: flex;
+}
+
+.header__li {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.header__a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    -ms-transition: opacity 300ms;
+    -o-transition: opacity 300ms;
+}
+
+.header__a:hover {
+    opacity: 0.6;
+}
+
+.header__button, .cover__button--register {
+    padding: 14px 50px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 350ms;
+    -webkit-transition: background, color, 350ms;
+    -moz-transition: background, color, 350ms;
+    -ms-transition: background, color, 350ms;
+    -o-transition: background, color, 350ms;
+}
+
+.header__button:hover, .cover__button--register:hover {
+    background: #69F1A1;
+    color: #000;
+}
+
+
+/* PORTADA - COVER  */
+
+main {
+    max-width: 1200px;
+    /* Para poder hacer scroll mientras no tengamos contenido abajo xd
+    Si agregamos más contenido, simplemente quitamos la altura */
+    height: calc(100vh + 800px);
+    padding: 40px;
+    margin: auto;
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.cover__text-info {
+    width: 50%;
+}
+
+.cover__h1 {
+    font-size: 50px;
+}
+
+.cover__p {
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.cover__buttons {
+    display: flex;
+    margin-top: 40px;
+}
+
+.cover__button--readmore {
+    padding: 14px 40px;
+    border: none;
+    color: #000;
+    background: #EAEAEA;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 300ms;
+    -webkit-transition: background 300ms;
+    -moz-transition: background 300ms;
+    -ms-transition: background 300ms;
+    -o-transition: background 300ms;
+}
+
+.cover__button--readmore:hover {
+    background: #DFDFDF;
+}
+
+.cover__media {
+    width: 50%;
+}
+.cover__video {
+    width: 100%;
+    margin-top: -40px;
+}
+
+
+
+/* BANNER */
+
+.banner-container {
+    margin-top: 80px;
+}
+
+.banner {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    background: #121214;
+    position: relative;
+}
+
+.banner__icon-wrapper--heart {
+    width: 35%;
+    height: 100%;
+}
+
+.banner__icon-heart {
+    width: 400px;
+    margin-top: -20px;
+    position: relative;
+    filter: drop-shadow(-30px 0px 30px rgba(0,0,0,.6));
+    -webkit-filter: drop-shadow(-30px 0px 30px rgba(0,0,0,.6));
+}
+
+.banner__icon-wrapper--fire {
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+}
+
+.banner__icon-fire {
+    width: 300px;
+    position: relative;
+    margin-top: -100px;
+    opacity: .68;
+}
+
+.banner__text {
+    width: 60%;
+    /* Le pongo relative para que el fuego quede detrás de este texto
+    relative tiene "más peso" por lo tanto lo pondrá encima del fuego
+    position: relative; */
+    position: relative;
+    padding: 40px;
+}
+.banner__h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+}
+.banner__a {
+    text-decoration: none;
+    /*enblockparaquemeactivelosmárgenesxd*/display: block;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 300ms;
+    -webkit-transition: color 300ms;
+    -moz-transition: color 300ms;
+    -ms-transition: color 300ms;
+    -o-transition: color 300ms;
+}
+
+.banner__a:hover {
+    color: #69F1A1;
 }

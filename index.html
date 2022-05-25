@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/script.js"></script>
     <title>Landing Page con efecto Parallax</title>
 </head>
 <body>
@@ -20,11 +21,11 @@
             <div class="header__menu">
                 <nav class="header__nav">
                     <ul class="header__ul">
-                        <li class="header__li" href="#">Productos</li>
-                        <li class="header__li" href="#">Soluciones</li>
-                        <li class="header__li" href="#">Blog</li>
-                        <li class="header__li" href="#">Compañía</li>
-                        <li class="header__li" href="#">Contactos</li>
+                        <li class="header__li"><a class="header__a" href="#">Productos</a></li>
+                        <li class="header__li"><a class="header__a" href="#">Soluciones</a></li>
+                        <li class="header__li"><a class="header__a" href="#">Blog</a></li>
+                        <li class="header__li"><a class="header__a" href="#">Compañía</a></li>
+                        <li class="header__li"><a class="header__a" href="#">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,33 +42,33 @@
 
         <div class="cover">
 
-            <div class="text__info-cover">
-                <h1>Haz historia. No te limites a informar sobre ello</h1>
-                <p>Ve más allá de solo informar sobre datos históricos. Utiliza la inteligencia procesable de cada evento digital para impactar positivamente en los resultados comerciales. Continuamente. En tiempo real. A escala.</p>
-                <div class="buttons__cover">
-                    <input type="button" class="btn__register-cover" value="Registrarse">
-                    <input type="button" class="btn__readmore-cover" value="Leer más">
+            <div class="cover__text-info">
+                <h1 class="cover__h1">Haz historia. No te limites a informar sobre ello</h1>
+                <p class="cover__p">Ve más allá de solo informar sobre datos históricos. Utiliza la inteligencia procesable de cada evento digital para impactar positivamente en los resultados comerciales. Continuamente. En tiempo real. A escala.</p>
+                <div class="cover__buttons">
+                    <input type="button" class="cover__button cover__button--register" value="Registrarse">
+                    <input type="button" class="cover__button cover__button--readmore" value="Leer más">
                 </div>
             </div>
 
-            <div class="media__cover">
-                <video src="media/media_animacion_cover.webm" autoplay playinline loop preload="auto" muted></video>
+            <div class="cover__media">
+                <video class="cover__video" src="media/media_animacion_cover.webm" autoplay playinline loop preload="auto" muted></video>
             </div>
 
         </div>
 
-        <div class="container__banner">
+        <div class="banner-container">
 
             <div class="banner">
-                <div class="banner__icon-heart">
-                    <img src="media/heart_notify.png" alt="">
+                <div class="banner__icon-wrapper banner__icon-wrapper--heart">
+                    <img class="banner__icon-heart" src="media/heart_notify.png" alt="">
                 </div>
-                <div class="banner__icon-fire">
-                    <img src="" alt="">
+                <div class="banner__icon-wrapper banner__icon-wrapper--fire">
+                    <img class="banner__icon-fire" src="media/fire-dynamic-color.png" alt="">
                 </div>
                 <div class="banner__text">
-                    <h2>La pila moderna de inteligencia de datos en la nube para su negocio de misión crítica.</h2>
-                    <a href="#">Leer más</a>
+                    <h2 class="banner__h2">La pila moderna de inteligencia de datos en la nube para su negocio de misión crítica.</h2>
+                    <a class="banner__a" href="#">Leer más</a>
                 </div>
             </div>
 
