@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    height: 100px;
+    height: 120px;
 }
 
 .header {
@@ -67,6 +67,10 @@ header {
     -moz-transition: background, color, 350ms;
     -ms-transition: background, color, 350ms;
     -o-transition: background, color, 350ms;
+}
+
+.header i.header__icon-menu {
+    display: none;
 }
 
 .header__button:hover, .cover__button--register:hover {
@@ -196,7 +200,8 @@ main {
 }
 .banner__a {
     text-decoration: none;
-    /*enblockparaquemeactivelosmárgenesxd*/display: block;
+    /*en block para que me active los márgenes xd*/
+    display: block;
     margin-top: 20px;
     color: #fff;
     font-size: 16px;
@@ -210,4 +215,110 @@ main {
 
 .banner__a:hover {
     color: #69F1A1;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    
+    /* HEADER SECTION */
+    .header, main {
+        padding: 20px;
+    }
+
+    /* 21 de especifidad para ganarle al estilo default de font-awesome */
+    .header i.header__icon-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header__register {
+        display: none;
+    }
+
+    .header__menu {
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        /* Por defecto no se muestra el menu hasta que se clickee el boton del menu por eso height: 0 */
+        height: 0px;
+        z-index: 10;
+        box-shadow: 0 0 30px -13px rgba(0,0,0,.6);
+        transition: all 300ms;
+        -webkit-transition: all 300ms;
+        -moz-transition: all 300ms;
+        -ms-transition: all 300ms;
+        -o-transition: all 300ms;
+}
+
+    .header__ul {
+        padding: 25px 0px;
+        flex-direction: column;
+        background: #fff;
+        gap: 20px;
+    }
+
+    .header__li {
+        padding: 0 40px;
+    }
+
+    .show-menu { /* Clase manipulada por js */
+        height: 226px;
+    }
+
+    /* COVER SECTION */
+
+    .cover__h1 {
+        font-size: 40px;
+    }
+
+    .cover__p {
+        font-size: 16px;
+    }
+
+    .banner__h2 {
+        font-size: 22px;
+    }
+
+    .banner__icon-heart {
+        left: -60px;
+        /* O bien: right: 60px, funciona igual */
+    }
+    
+    .banner__icon-fire {
+        right: -20px;
+        /* O bien: left: 20px, funciona igual */
+    }
+}
+
+
+/* Segundo Query (de tablet a mobile) */
+@media screen and (max-width: 920px) {
+    .cover__text-info {
+        width: 100%;
+    }
+    .cover__media {
+        display: none;
+    }
+    .banner {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .banner__icon-fire {
+        display: none;
+    }
+    .banner__icon-heart {
+        left: 0;
+    }
+    .banner__text {
+        /* Ahora el texto ocupará todo el ancho del banner
+        de esa manera, el flex-wrap lo tirará hacia abajo */
+        width: 100%;
+        margin-top: -100px;
+    }
 }
