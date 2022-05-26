@@ -1,5 +1,6 @@
 const iconMenu = document.querySelector('.header i.header__icon-menu');
 
+// evento Click del ícono del menu
 iconMenu.addEventListener('click', function showMenu() {
     document.querySelector('.header__menu').classList.toggle('show-menu');
     /* el método toggle() añade la clase al elemento si no la tiene
