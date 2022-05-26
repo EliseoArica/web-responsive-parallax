@@ -297,7 +297,7 @@ main {
 }
 
 
-/* Segundo Query (de tablet a mobile) */
+/* Segundo Query (tablet??) */
 @media screen and (max-width: 920px) {
     .cover__text-info {
         width: 100%;
@@ -320,5 +320,27 @@ main {
         de esa manera, el flex-wrap lo tirará hacia abajo */
         width: 100%;
         margin-top: -100px;
+    }
+}
+
+
+/* Tercer query (mobile) */
+@media screen and (max-width: 426px) {
+    .banner__icon-heart {
+        width: 300px;
+    }
+    
+}
+
+/* 4to Query (móviles pequeños) */
+@media screen and (max-width: 360px) {
+    .cover__button--readmore {
+        padding: 14px 30px;
+    }
+    .cover__button--register {
+        padding: 14px 30px;
+    }
+    .banner__icon-heart {
+        left: -14px;
     }
 }
